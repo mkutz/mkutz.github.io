@@ -4,7 +4,7 @@ body {
 
 a[href^='https://'],
 a[href^='http://'] {
-  padding-left: 1em;
+  padding-left: 1.1em;
   background: url(img/logo_ext_link.svg) left/contain no-repeat;
 }
 
