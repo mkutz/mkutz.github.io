@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+}
+
+a[href^='https://'],
+a[href^='http://'] {
+  padding-left: 1em;
+  background: url(img/logo_ext_link.svg) left/contain no-repeat;
+}
+
+a[href^='https://twitter.com'] {
+  background-image: url(img/logo_twitter.svg);
+}
+
+a[href^='https://www.xing.com'] {
+  background-image: url(img/logo_xing.svg);
+}
+
+a[href^='https://www.linkedin.com'] {
+  background-image: url(img/logo_linkedin.svg);
+}
+
+a[href^='https://stackoverflow.com'] {
+  background-image: url(img/logo_stackoverflow.svg);
+}
+
+a[href^='https://medium.com'] {
+  background-image: url(img/logo_medium.svg);
+}
+
+a[href^='https://github.com'] {
+  background-image: url(img/logo_github.svg);
+}
