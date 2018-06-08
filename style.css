@@ -1,74 +1,52 @@
 body {
   font-family: sans-serif;
+  max-width: 1000px;
+  min-width: 300px;
+  height: 100%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  height: 9em;
-  background: white;
-}
-
-main {
-  margin-top: 9em;
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
+  float: left;
 }
 
 section {
-  padding: 3em 1em 1em;
-  width: 100%;
-  height: 100vh;
-  background: white;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.5s;
+  display: none;
+  clear: both;
 }
-section:first-of-type {
-  opacity: 1;
-  transition: all 0.5s;
-}
+
 section:target {
-  opacity: 1;
+  display: block;
 }
 
-a[href^='https://'],
-a[href^='http://'] {
-  padding-left: 1.1em;
-  background: url(img/logo_ext_link.svg) left/contain no-repeat;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  float: right;
 }
 
-a[href^='https://twitter.com'] {
-  background-image: url(img/logo_twitter.svg);
+nav ul li {
+  display: inline-block;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
 }
 
-a[href^='https://www.xing.com'] {
-  background-image: url(img/logo_xing.svg);
+nav ul li a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  margin: 5px;
 }
 
-a[href^='https://www.linkedin.com'] {
-  background-image: url(img/logo_linkedin.svg);
-}
-
-a[href^='https://stackoverflow.com'] {
-  background-image: url(img/logo_stackoverflow.svg);
-}
-
-a[href^='https://medium.com'] {
-  background-image: url(img/logo_medium.svg);
-}
-
-a[href^='https://github.com'] {
-  background-image: url(img/logo_github.svg);
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+nav ul li:hover {
+  box-shadow:  0px 0px 6px black;
 }

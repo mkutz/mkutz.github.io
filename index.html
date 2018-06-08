@@ -11,63 +11,116 @@
 </head>
 
 <body>
-  
-  <header>
-    <h1><a href="index.html">Michael Kutz</a></h1>
 
-    <nav>
-      <ul>
-        <li><a href="#biography">Biography</a></li>
-        <li><a href="#elsewhere">Elsewere</a></li>
-        <li><a href="#impressum">Impressum</a></li>
-      </ul>
-    </nav>
+  <header>
+    <h1>Michael Kutz</h1>
   </header>
 
+  <nav id="navigation">
+    <nav>
+      <ul>
+        <li>
+          <a href="#biography">Biography</a>
+        </li>
+        <li>
+          <a href="#elsewhere">Elsewere</a>
+        </li>
+        <li>
+          <a href="#impressum">Impressum</a>
+        </li>
+      </ul>
+    </nav>
+  </nav>
 
   <main>
 
     <section id="biography">
+      <h2>Biography</h2>
       <p>
-        I've been a software engineer since 2009, worked in various agile projects &amp; got a taste for quality assurance. Today I'm a quality engineer at <a href="https://rewe-digital.com">REWE digital</a>.
+        I've been a software engineer since 2009, worked in various agile projects &amp; got a taste for quality assurance. Today I'm a quality engineer at <a href="https://rewe-digital.com">REWE digital</a> helping agile teams with test automation, continuous delivery and deployment techniques.
       </p>
       <img id="photo" src="img/avatar_tea_200x200.jpg">
     </section>
 
     <section id="elsewhere">
+      <h2>Elsewere</h2>
       <ul>
-        <li><a href="https://medium.com/@MichaKutz">Stories on Medium</a></li>
-        <li><a href="https://github.com/mkutz">Code on GitHub</a></li>
-        <li><a href="https://stackoverflow.com/users/story/437621">Contributions on Stack Overflow</a>
-        <li><a href="https://twitter.com/MichaKutz">Profile on Twitter</a></li>
-        <li><a href="https://www.xing.com/profile/Michael_Kutz4">Profile on Xing</a></li>
-        <li><a href="https://www.linkedin.com/in/michael-kutz-693457131/">Profile on LinkedIn</a></li>
+        <li>
+          <a href="https://medium.com/@MichaKutz">Stories on Medium</a>
+        </li>
+        <li>
+          <a href="https://github.com/mkutz">Code on GitHub</a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/users/story/437621">Contributions on Stack Overflow</a>
+          <li>
+            <a href="https://twitter.com/MichaKutz">Profile on Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.xing.com/profile/Michael_Kutz4">Profile on Xing</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/michael-kutz-693457131/">Profile on LinkedIn</a>
+          </li>
       </ul>
     </section>
 
     <section id="impressum">
-      <h2>Technically responsible (§ 5 TMG)</h2>
+      <h2>Impressum</h2>
 
-      <h3>Address</h3>
-      Michael Kutz<br/>
-      Corkstraße 19<br/>
-      51103 Köln
+      <h3>Technically Responsible (§ 5 TMG)</h3>
 
-      <h3>Telephone</h3>
-      0221/64000499
+      <dl>
+        <dt>Address</dt>
+        <dd>
+          <a href="https://www.google.com/maps/place/Corkstraße+51103+Köln">
+            Michael Kutz
+            <br/>Corkstraße 19
+            <br/>51103 Köln
+          </a>
+        </dd>
 
-      <h3>Email</h3>
-      mail@michael-kutz.de
+        <dt>Telephone</dt>
+        <dd>
+          <a href="tel:+49022164000499">0221/64000499</a>
+        </dd>
 
-      <h2>Responsible for content (§ 55 Abs. 2 RStV)</h2>
+        <dt>Email</dt>
+        <dd>
+          <a href="mailto:mail@michael-kutz.de">mail@michael-kutz.de</a>
+        </dd>
+      </dl>
 
-      <h3>Address</h3>
-      Michael Kutz<br/>
-      Corkstraße 19<br/>
-      51103 Köln
+
+      <h3>Responsible for Content (§ 55 Abs. 2 RStV)</h3>
+
+      <dl>
+        <dt>Address</dt>
+        <dd>
+          <a href="https://www.google.com/maps/place/Corkstraße+51103+Köln">
+            Michael Kutz
+            <br/>Corkstraße 19
+            <br/>51103 Köln
+          </a>
+        </dd>
     </section>
-  
+
   </main>
+
+  <script>
+    window.onscroll = function () { myFunction() };
+
+    var header = document.getElementById("navigation");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
 
 </body>
 
