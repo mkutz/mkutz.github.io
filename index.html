@@ -24,6 +24,9 @@
           <a href="#biography">Biography</a>
         </li>
         <li>
+          <a href="#talks">Talks</a>
+        </li>
+        <li>
           <a href="#elsewhere">Elsewere</a>
         </li>
         <li>
@@ -40,6 +43,76 @@
       <p>
         I've been a software engineer since 2009, worked in various agile projects &amp; got a taste for quality assurance. Today I'm a quality engineer at <a href="https://rewe-digital.com">REWE digital</a> helping agile teams with test automation, continuous delivery and deployment techniques.
       </p>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+
+      <article id="from-monolith-testing-to-microservice-qa-talk" class="abstract">
+        <h3>From Monolith Testing to Microservice Quality Assurance</h3>
+        <p>
+          When REWE digital started to sell groceries online, we launched with a massive monolithic piece of software developed in only six months by a software agency.
+        </p>
+        <p>
+          Right after launch we started to build up our own software teams to take over further development, but we had a hard time developing new features without breaking existing functionality…
+        </p>
+        <p>
+          …today the monolith is still in place, but most of its functionality has been replaced by microservices which are communicating via asynchronous messaging and deliver their own frontends.
+        </p>
+        <p>
+          In this session we will talk about challenges we faced over the past three years:
+        </p>
+        <ul>
+          <li>optimizing the monolith's architecture for faster feature development</li>
+          <li>breaking it apart into microservices</li>
+          <li>adjusting the QA strategy from a single deployment release process to 40 teams deploying their services whenever they want to</li>
+          <li>developing new types of testing for microservices and microfrontends</li>
+          <li>solving problems with testing asynchronously-communicating microservices</li>
+          <li>organizing QA in a rapidly growing company</li>
+        </ul>
+      </article>
+
+      <article id="team-driven-microservice-qa-talk" class="abstract">
+        <h3>Team-Driven Microservice Quality Assurance</h3>
+        <p>
+          While the Microservice architectural style has a lot of benefits, it makes certain QA practices impractical: there is no big release candidate that can be tested before put to production, no single log file to look into for root cause analysis and no single team to assign found bugs to. Instead there are deployments happening during test runs, as many log files as there are microservices and many teams to mess with the product.
+        </p>
+        <p>
+          At REWE digital we took a strictly team-driven QA approach. Our teams tried a lot of good and bad ideas to QA our microservice ecosystem. This involves automated testing, but also monitoring, logging and alerting practices.
+        </p>
+        <p>
+          In this talk I will present some of the best of those ideas, like testing microservices in isolation including UI tests, posting deployment events to a chat room, add team names to log lines or team-driven monitoring on service metrics.
+        </p>
+        <p>
+          Also I will talk about some of the ideas that failed for us, like building a comprehensive test suit for the overall product or a company-wide QA guild.
+        </p>
+      </article>
+
+      <article id="microservice-test-lib-talk" class="abstract">
+        <h3>How to Build a Test Library for a Microservices-Based Web Application with Geb & Spock</h3>
+        <p>
+          At REWE digital we are building & maintaining a Microservice based e-commerce web application. Our service teams work quite autonomous & are responsible for their own services' quality. They decide which measures are appropriate & efficient in order ensure no bugs in production. Many have a reasonable code coverage via unit tests, a good lot of service tests –including UI tests– & a sufficient monitoring & alerting system.
+        </p>
+        <p>
+          However, several teams felt the need for a more integrated testing of the whole system to prevent CSS clashes, errors due to interface changes or eventual inconsistency disasters & many many unforeseen issues.
+        </p>
+        <p>
+          To support these teams, we decided turn our old retired comprehensive test suite into a test library to enable teams to write their own system tests without the need to implement every stupid step in every team.
+        </p>
+        <p>
+          In this talk I'd like to present our lessons learned & developed design patterns from implementing such a test library with Geb & Spock.
+        </p>
+      </article>
+
+      <article id="trust-is-better-talk" class="abstract" lang="de">
+        <h3>Vertrauen ist <del>gut</del> besser, Kontrolle ist <del>besser</del> schädlich (<a href="https://en.wikipedia.org/wiki/PechaKucha">Pecha Kucha</a>)</h3>
+        <p>
+          Klassisch werden Software-Projekte häufig mit separierten Entwicklungs- und Test-Teams durchgeführt, während in der ageilen Softwareentwicklung in der Regel Tester und Entwickler in <em>einem</em> Team zusammengefasst werden. Letzters fühlt sich für mich persönlich sehr viel besser an, aber <em>warum</em> ist das so?
+        </p>
+        <p>
+          In diesem Vortrag gehe ich auf verschiedene Aspekte ein, die aus meiner Sicht die Verwendung eines separaten Test-Teams regelrecht umständlich und sogar kontroproduktiv ist und was den agilen Ansatz so viel erfolgreicher und sinnvoller macht.
+        </p>
+      </article>
     </section>
 
     <section id="elsewhere">
