@@ -8,7 +8,7 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   color: #222;
-  /*padding: 10px;*/
+  font-size: 12pt;
 }
 
 header {
@@ -65,8 +65,13 @@ nav ul li a:hover {
 
 a[href^='https://'],
 a[href^='http://'] {
-  padding-left: 1.1em;
-  background: url(img/logo_ext_link.svg) left/contain no-repeat;
+  padding-left: 1.3em;
+  background: url(img/logo_ext_link.svg) left/1em no-repeat;
+}
+
+a[href^='https://www.google.com/maps'],
+a[href^='https://goo.gl/maps'] {
+  background-image: url(img/logo_location.svg);
 }
 
 a[href^='https://twitter.com'] {
