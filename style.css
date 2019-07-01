@@ -70,7 +70,8 @@ a[href^='http://'] {
 }
 
 a[href^='https://www.google.com/maps'],
-a[href^='https://goo.gl/maps'] {
+a[href^='https://goo.gl/maps'],
+a.address {
   background-image: url(img/logo_location.svg);
 }
 
