@@ -42,7 +42,8 @@ nav {
 
 nav ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0.5em;
+  margin: 0;
 }
 
 nav ul li {
@@ -54,7 +55,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   display: block;
-  width: 100px;
+  width: 120px;
   color: #ddd;
 }
 
@@ -97,4 +98,8 @@ a[href^='https://medium.com'] {
 
 a[href^='https://github.com'] {
   background-image: url(img/logo_github.svg);
+}
+
+a[href^='https://youtu.be'] {
+  background-image: url(img/logo_youtube.svg);
 }
