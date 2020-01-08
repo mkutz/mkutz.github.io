@@ -107,3 +107,7 @@ a[href^='https://youtu.be'] {
 a[href^='https://slides.com'] {
   background-image: url(img/logo_slides_com.svg);
 }
+
+dt {
+  font-weight: bold;
+}
