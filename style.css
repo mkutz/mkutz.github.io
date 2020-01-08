@@ -110,4 +110,9 @@ a[href^='https://slides.com'] {
 
 dt {
   font-weight: bold;
+  margin-top: 1em;
+}
+
+dd {
+  margin-bottom: 1em;
 }
