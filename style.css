@@ -116,3 +116,17 @@ dt {
 dd {
   margin-bottom: 1em;
 }
+
+.cancelled {
+  text-decoration: crimson line-through;
+}
+
+span.label {
+  background: crimson;
+  color: white;
+  border-radius: 0.2em;
+  margin: 0.2em;
+  padding: 0.2em;
+  font-size: 0.8em;
+  display: inline-block;
+}
