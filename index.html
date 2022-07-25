@@ -14,33 +14,32 @@
 
   <header>
     <h1>
-      <img id="photo" src="img/avatar_tea_100x100.jpg" alt="Photo of Michael Kutz drinking tea in a fine suit"/>
       Michael Kutz
     </h1>
-
-    <nav id="navigation">
-      <ul>
-        <li>
-          <a href="#biography">Biography</a>
-        </li>
-        <li>
-          <a href="#tour">Tour</a>
-        </li>
-        <li>
-          <a href="#talks">Talks</a>
-        </li>
-        <li>
-          <a href="#workshops">Workshops</a>
-        </li>
-        <li>
-          <a href="#elsewhere">Elsewhere</a>
-        </li>
-        <li>
-          <a href="#impressum">Impressum</a>
-        </li>
-      </ul>
-    </nav>
   </header>
+
+  <nav id="navigation">
+    <ul>
+      <li>
+        <a href="#biography">Biography</a>
+      </li>
+      <li>
+        <a href="#tour">Tour</a>
+      </li>
+      <li>
+        <a href="#talks">Talks</a>
+      </li>
+      <li>
+        <a href="#workshops">Workshops</a>
+      </li>
+      <li>
+        <a href="#elsewhere">Elsewhere</a>
+      </li>
+      <li>
+        <a href="#impressum">Impressum</a>
+      </li>
+    </ul>
+  </nav>
 
   <main>
 
@@ -68,7 +67,7 @@
       </p>
 
       <h3>2022</h3>
-      <dl id="tour-calendar-2022">
+      <dl id="tour-calendar-2022" class="tour-calendar">
         <dt>
           <span class="tour-date">2022-11-21…24</span>
           <span class="tour-occasion"><a href="https://agiletestingdays.com">Agile Testing Days</a></span>
@@ -635,12 +634,12 @@
   </main>
 
   <script>
-    window.onscroll = function () { myFunction() };
+    window.onscroll = function () { toggleSticky() };
 
     let header = document.getElementById("navigation");
     let sticky = header.offsetTop;
 
-    function myFunction() {
+    function toggleSticky() {
       if (window.scrollY >= sticky) {
         header.classList.add("sticky");
       } else {
