@@ -147,3 +147,8 @@ span.label {
   font-size: 0.8em;
   display: inline-block;
 }
+
+#elsewhere ul {
+  list-style: none;
+  padding-left: 0;
+}
