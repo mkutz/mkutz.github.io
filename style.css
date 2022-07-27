@@ -13,6 +13,7 @@ header {
   padding: 1em;
   margin-top: 1em;
   display: block;
+  background: rgba(255, 255, 255, 80%);
 }
 
 h1 {
@@ -34,8 +35,9 @@ section {
 section:target {
   display: block;
   border: 0.3em solid #222;
-  transition: border-left-color 0.3s;
+  transition: border-color 0.3s;
   transition-timing-function: ease-in-out;
+  background: rgba(255, 255, 255, 80%);
 }
 
 nav {
@@ -65,7 +67,7 @@ nav ul li a {
   display: block;
   max-width: 150px;
   color: #222;
-  background: #fff;
+  background: rgba(255, 255, 255, 80%);
   border: 0.3em solid #222;
   padding: 1em;
   margin: 0.3em 0;

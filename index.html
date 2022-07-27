@@ -41,7 +41,7 @@
     </ul>
   </nav>
 
-  <main>
+  <main id="main">
 
     <section id="biography">
       <h2>Biography</h2>
@@ -636,14 +636,18 @@
   <script>
     window.onscroll = function () { toggleSticky() };
 
-    let header = document.getElementById("navigation");
-    let sticky = header.offsetTop;
+    const navigation = document.getElementById("navigation");
+    const main = document.getElementById("main");
+    const navigationOffsetTop = navigation.offsetTop;
 
     function toggleSticky() {
-      if (window.scrollY >= sticky) {
-        header.classList.add("sticky");
+      const scrollY = window.scrollY
+      if (scrollY >= navigationOffsetTop) {
+        navigation.classList.add("sticky");
+        main.style.marginTop = navigationOffsetTop + "px";
       } else {
-        header.classList.remove("sticky");
+        navigation.classList.remove("sticky");
+        main.style.marginTop = "0";
       }
     }
   </script>
