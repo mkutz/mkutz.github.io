@@ -44,9 +44,17 @@ nav {
   display: flex;
 }
 
-nav.sticky {
-  position: fixed;
-  top: 0;
+@media print {
+  nav.sticky {
+    display: none;
+  }
+}
+
+@media screen {
+  nav.sticky {
+    position: fixed;
+    top: 0;
+  }
 }
 
 nav ul {
