@@ -13,6 +13,8 @@
 
 <body>
 
+  <div class="progressbar"></div>
+
   <header>
     <h1>
       Michael Kutz
@@ -273,7 +275,7 @@
     </section>
 
     <section id="talks">
-      <h2>Talks</h2>
+        <h2>Talks</h2>
 
       <article id="measure-quality-talk" class="abstract">
         <h3>How (Not) to Measure Quality</h3>
@@ -638,8 +640,6 @@
   </main>
 
   <script>
-    window.onscroll = function () { toggleSticky() };
-
     const navigation = document.getElementById("navigation");
     const main = document.getElementById("main");
     const navigationOffsetTop = navigation.offsetTop;
@@ -654,6 +654,24 @@
         main.style.marginTop = "0";
       }
     }
+    window.addEventListener('scroll', toggleSticky);
+
+    const progressbar = document.querySelector(".progressbar");
+    const section = document.querySelector("main");
+    const scrollProgressbar = () => {
+        const scrollDistance = -(section.getBoundingClientRect().top);
+        const progressPercentage =
+            (scrollDistance /
+                (section.getBoundingClientRect().height -
+                    document.documentElement.clientHeight)) * 100;
+        const val = Math.floor(progressPercentage);
+        progressbar.style.width = Math.max(val, 0) + "%";
+
+        if (val < 0) {
+            progressbar.style.width = "0";
+        }
+    };
+    window.addEventListener('scroll', scrollProgressbar);
   </script>
 
 </body>
