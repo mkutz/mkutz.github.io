@@ -129,6 +129,10 @@ a[href^='https://twitter.com'] {
   background-image: url(img/logo_twitter.svg);
 }
 
+a[href^='https://mstdn.social'] {
+  background-image: url(img/logo_mastodon.svg);
+}
+
 a[href^='https://www.xing.com'] {
   background-image: url(img/logo_xing.svg);
 }
