@@ -119,6 +119,7 @@ a[href^='http://'] {
 }
 
 a[href^='https://www.google.com/maps'],
+a[href^='https://maps.app.goo.gl'],
 a[href^='https://goo.gl/maps'],
 a[href^='https://g.page/'],
 a.address {
