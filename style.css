@@ -130,6 +130,14 @@ a[href^='https://twitter.com'] {
   background-image: url(img/logo_twitter.svg);
 }
 
+a[href^='https://x.com'] {
+  background-image: url(img/logo_x.svg);
+}
+
+a[href^='https://bsky.app'] {
+  background-image: url(img/logo_bluesky.svg);
+}
+
 a[href^='https://mstdn.social'] {
   background-image: url(img/logo_mastodon.svg);
 }
