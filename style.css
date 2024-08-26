@@ -138,7 +138,8 @@ a[href^='https://bsky.app'] {
   background-image: url(img/logo_bluesky.svg);
 }
 
-a[href^='https://mstdn.social'] {
+a[href^='https://mstdn.social'],
+a[href^='https://digitalcourage.social']{
   background-image: url(img/logo_mastodon.svg);
 }
 
