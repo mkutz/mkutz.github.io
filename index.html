@@ -452,6 +452,58 @@
     <section id="talks">
       <h2>Talks</h2>
 
+      <article id ="trust-responsibility" class="abstract">
+        <h3>With Great Trust Comes Great Responsibility – How to Super Empower Teams to Continuously Deliver High Quality Software</h3>
+        <p>
+          16 years ago I worked as a junior developer on a huge project. The situation was bleak. Release trains with rigid schedules, only to be followed by long bug fixing phases. It was close to unbearable, probably nobody enjoyed working there, and the delivered quality was way below desired standards.
+          One year later, many things had changed in the project’s structure. Suddenly, I worked on a team that delivered high quality even before deadlines were met, which found their own creative ways to do so and had a lot of fun at work. It was like we were bit by a radioactive spider and developed superpowers.
+        </p>
+        <p>
+          Ever since that team, I tried to reproduce that spirit in any team I joined. To find the radioactive spider that bit us. Sometimes I succeeded, sometimes I did not.
+        </p>
+        <p>
+          In this keynote, I will tell you about my attempts. About things that seemed super important, but turned out to be mere details. And about details that seemed unimportant, yet turned out to be essential. About why today I think that trust is the most important and first component, and what other components are essential when building a team with the super power to continuously deliver high quality software in the most efficient way.
+        </p>
+        <h4>Key Learnings</h4>
+        <ul>
+          <li>Understand how more trust and less control can turn into true ownership.</li>
+          <li>Learn which other crucial components are required to build a super empowered team and how to figure out which your team is yet missing.</li>
+          <li>Acquire ways to demonstrate responsible behavior and ownership to deepen trust.</li>
+        </ul>
+        <h4>Material</h4>
+        <p>
+          <a href="https://slides.com/mkutz/trust-responsibility">Slides</a> (work in progress)
+        </p>
+      </article>
+
+      <article id="hexagonal-test-pyramid" class="abstract">
+        <h3>The Hexagonal Test Pyramid – Cover More Risk with Less Test Effort Using Hexagonal Architecture</h3>
+        <p>
+          When starting a new (micro) service, it seems to be a good idea to write a lot of tests for the application as a whole.
+          Frameworks like Spring Boot make that style of testing fairly easy. But after some time, the runtime of these tests becomes a burden.
+        </p>
+        <p>
+          Concentric architectures can help here by isolating business code from infrastructure adapters.
+          This allows us to test the business logic with simple, fast, and reliable unit tests, while the remaining integration tests for the adapters can focus on risks that arise solely from integration.
+        </p>
+        <p>
+          In this talk, I'll demonstrate how we learned to take advantage of this architecture to push much of the risk to lower levels of the test automation pyramid and improve our tests' code and runtime dramatically.
+          I will show this using real Spring Boot service in simple Hexagonal Architecture.
+          Further technologies used will be JUnit 6, Testcontainers, AssertJ, and my own ApproveJ.
+          All code will be shared.
+        </p>
+        <h4>Key Learnings</h4>
+        <ul>
+          <li>Learn about the basics of hexagonal architecture and how it helps to organize your Spring Boot service.</li>
+          <li>See how technically complex integration test cases can be pushed down the test pyramid using hexagonal architecture.</li>
+          <li>Discover how to write concise, fast, and minimal tests that cover the remaining integration risk.</li>
+        </ul>
+        <h4>Material</h4>
+        <p>
+          <a href="https://slides.com/mkutz/hexagonal-test-pyramid">Slides</a> (work in progress)
+        </p>
+      </article>
+
       <article id="wtfm" class="abstract">
         <h3>WTFM: Where's the F****** Manual⁈ – Why we avoid writing documentation, why we shouldn't, and how to keep it useful with minimal pain</h3>
         <p>
