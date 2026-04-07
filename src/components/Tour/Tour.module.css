@@ -1,3 +1,7 @@
+.tour {
+  background: var(--color-section-orange);
+}
+
 .tourYear {
   margin-top: 2rem;
 }

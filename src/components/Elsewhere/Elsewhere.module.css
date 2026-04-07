@@ -1,3 +1,7 @@
+.elsewhere {
+  background: var(--color-section-indigo);
+}
+
 .elsewhereList {
   list-style: none;
   display: flex;

@@ -83,19 +83,21 @@ function TourEvent({ event }) {
 
 export default function Tour() {
   return (
-    <section id="tour">
-      <h2>Tour</h2>
-      <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
-        Conference appearances. Videos and slides are added to past events when available.
-      </p>
-      {tourData.map(({ year, events }) => (
-        <div key={year} className={styles.tourYear}>
-          <h3>{year}</h3>
-          {events.map((event, i) => (
-            <TourEvent key={i} event={event} />
-          ))}
-        </div>
-      ))}
+    <section id="tour" className={styles.tour}>
+      <div className="section-inner">
+        <h2>Tour</h2>
+        <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
+          Conference appearances. Videos and slides are added to past events when available.
+        </p>
+        {tourData.map(({ year, events }) => (
+          <div key={year} className={styles.tourYear}>
+            <h3>{year}</h3>
+            {events.map((event, i) => (
+              <TourEvent key={i} event={event} />
+            ))}
+          </div>
+        ))}
+      </div>
     </section>
   )
 }

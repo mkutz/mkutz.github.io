@@ -1,3 +1,7 @@
+.resources {
+  background: var(--color-section-blue);
+}
+
 .resourcesList {
   list-style: none;
   display: flex;

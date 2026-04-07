@@ -1,3 +1,7 @@
+.biography {
+  background: var(--color-section-red);
+}
+
 .biography p {
   margin-bottom: 1rem;
   max-width: 65ch;

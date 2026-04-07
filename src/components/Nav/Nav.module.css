@@ -21,7 +21,7 @@
   overflow-x: auto;
 }
 
-.siteNav a {
+.navLink {
   display: block;
   padding: 1rem 1.25rem;
   text-decoration: none;
@@ -31,11 +31,13 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   white-space: nowrap;
-  transition: color 0.2s;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.siteNav a:hover {
-  color: var(--color-accent);
+.navLink:hover {
+  color: var(--nav-color);
+  border-bottom-color: var(--nav-color);
 }
 
 @media (max-width: 640px) {

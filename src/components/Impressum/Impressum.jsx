@@ -13,24 +13,26 @@ function ObfuscatedLink({ parts, protocol }) {
 export default function Impressum() {
   return (
     <section id="impressum" className={styles.impressum}>
-      <h2>Impressum</h2>
-      <p className={styles.note}>Information according to § 5 DDG</p>
+      <div className="section-inner">
+        <h2>Impressum</h2>
+        <p className={styles.note}>Information according to § 5 DDG</p>
 
-      <address className={styles.address}>
-        <span>Michael Kutz</span>
-        <span>Wellenstraße 53</span>
-        <span>53721 Siegburg</span>
-      </address>
+        <address className={styles.address}>
+          <span>Michael Kutz</span>
+          <span>Wellenstraße 53</span>
+          <span>53721 Siegburg</span>
+        </address>
 
-      <div className={styles.contact}>
-        <ObfuscatedLink
-          protocol="mailto:"
-          parts={['mail', '@', 'michael', '-', 'kutz', '.de']}
-        />
-        <ObfuscatedLink
-          protocol="tel:+4902241"
-          parts={['02241', '/', '2409657']}
-        />
+        <div className={styles.contact}>
+          <ObfuscatedLink
+            protocol="mailto:"
+            parts={['mail', '@', 'michael', '-', 'kutz', '.de']}
+          />
+          <ObfuscatedLink
+            protocol="tel:+4902241"
+            parts={['02241', '/', '2409657']}
+          />
+        </div>
       </div>
     </section>
   )

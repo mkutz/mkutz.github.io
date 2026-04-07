@@ -3,9 +3,10 @@ import styles from './Resources.module.css'
 
 export default function Resources() {
   return (
-    <section id="resources">
-      <h2>Resources</h2>
-      <ul className={styles.resourcesList}>
+    <section id="resources" className={styles.resources}>
+      <div className="section-inner">
+        <h2>Resources</h2>
+        <ul className={styles.resourcesList}>
         {resources.map((res, i) => (
           <li key={i}>
             <a href={res.url}>{res.label}</a>
@@ -20,6 +21,7 @@ export default function Resources() {
           </li>
         ))}
       </ul>
+      </div>
     </section>
   )
 }

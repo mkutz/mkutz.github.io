@@ -1,5 +1,6 @@
 import { talks } from '../../data/talks'
 import styles from '../shared/Card.module.css'
+import sectionStyles from './Talks.module.css'
 
 function TalkCard({ talk }) {
   return (
@@ -38,12 +39,14 @@ function TalkCard({ talk }) {
 
 export default function Talks() {
   return (
-    <section id="talks">
-      <h2>Talks</h2>
-      <div className={styles.cardGrid}>
-        {talks.map((talk) => (
-          <TalkCard key={talk.id} talk={talk} />
-        ))}
+    <section id="talks" className={sectionStyles.talks}>
+      <div className="section-inner">
+        <h2>Talks</h2>
+        <div className={styles.cardGrid}>
+          {talks.map((talk) => (
+            <TalkCard key={talk.id} talk={talk} />
+          ))}
+        </div>
       </div>
     </section>
   )

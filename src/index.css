@@ -18,6 +18,15 @@
   --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   --max-width: 900px;
   --section-gap: 4rem;
+
+  /* Rainbow flag section backgrounds */
+  --color-section-red: #E40303;
+  --color-section-orange: #FF8C00;
+  --color-section-yellow: #FFED00;
+  --color-section-green: #008026;
+  --color-section-blue: #004DFF;
+  --color-section-indigo: #6A0DAD;
+  --color-section-violet: #750787;
 }
 
 html {
@@ -36,18 +45,19 @@ body {
 
 /* ---- Main ---- */
 main {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  width: 100%;
 }
 
 section {
-  padding: var(--section-gap) 0;
-  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 1.5rem;
 }
 
-section:last-child {
-  border-bottom: none;
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: var(--section-gap) 2.5rem;
 }
 
 section h2 {
@@ -65,8 +75,13 @@ section > p {
 
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
-  main {
-    padding: 0 1rem;
+  section {
+    padding: 1rem 0.75rem;
+  }
+
+  .section-inner {
+    padding: 2rem 1.25rem;
+    border-radius: 8px;
   }
 }
 

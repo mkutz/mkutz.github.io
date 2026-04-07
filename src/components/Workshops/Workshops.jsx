@@ -1,5 +1,6 @@
 import { workshops } from '../../data/workshops'
 import styles from '../shared/Card.module.css'
+import sectionStyles from './Workshops.module.css'
 
 function WorkshopCard({ workshop }) {
   return (
@@ -43,12 +44,14 @@ function WorkshopCard({ workshop }) {
 
 export default function Workshops() {
   return (
-    <section id="workshops">
-      <h2>Workshops</h2>
-      <div className={styles.cardGrid}>
-        {workshops.map((workshop) => (
-          <WorkshopCard key={workshop.id} workshop={workshop} />
-        ))}
+    <section id="workshops" className={sectionStyles.workshops}>
+      <div className="section-inner">
+        <h2>Workshops</h2>
+        <div className={styles.cardGrid}>
+          {workshops.map((workshop) => (
+            <WorkshopCard key={workshop.id} workshop={workshop} />
+          ))}
+        </div>
       </div>
     </section>
   )
