@@ -6,17 +6,25 @@ export default function Biography() {
       <div className="section-inner">
         <h2>Biography</h2>
         <p>
-          I&apos;ve been working in professional software development for more than 12 years now.
-          I love to write working software, and I hate fixing bugs.
-          Hence, I developed a strong focus on test automation, continuous delivery/deployment and agile principles.
+          I'm a Software Engineer with a passion for systems, quality, and the people who build them.
+          In June 2026, I'm joining <a href="https://entropy-data.de" target="_blank" rel="noopener noreferrer">Entropy Data</a> as a Staff Engineer.
+          Prior to that, I spent almost 12 years as a Principal Engineer at <a href="https://www.rewe-digital.com" target="_blank" rel="noopener noreferrer">REWE digital</a>, where I played a key role in shaping agile development, test automation, and SRE practices.
         </p>
+
         <p>
-          Later I came to the insight that the most sustainable way of fixing code is, to optimize those who code.
-          For that reason I dug deeper into psychological safety, cognitive biases and ways to spread knowledge within software producing organizations.
+          I am particularly fascinated by the intersection of code and psychology:
+          How do cognitive biases influence our software architecture?
+          How do metrics drive our behavior?
+          I regularly <a href="#talks">speak</a> and <a href="https://medium.com/@MichaKutz" target="_blank" rel="noopener noreferrer">write</a> about these topics at <a href="#tour">international conferences</a> and on platforms like <a href="https://www.infoq.com/profile/Michael-Kutz/" target="_blank" rel="noopener noreferrer">InfoQ</a>.
         </p>
+
         <p>
-          Since 2014 I work at REWE digital as a software engineer and internal coach for quality assurance and testing.
-          As such my main objective is to support our development teams in QA and test automation to empower them to write awesome bug-free software fast.
+          A big part of my heart goes into open-source.
+          I am the creator and maintainer of tools like <a href="https://approvej.org" target="_blank" rel="noopener noreferrer">ApproveJ</a>, <a href="https://stubit.org" target="_blank" rel="noopener noreferrer">Stubit</a>, and the <a href="https://shakespeareframework.org" target="_blank" rel="noopener noreferrer">Shakespeare Framework</a>.
+        </p>
+
+        <p>
+          When I'm not analyzing complex systems or tinkering with new tools, you'll likely find me lacing up my running shoes, playing video games, or relaxing in distant sci-fi universes.
         </p>
       </div>
     </section>
