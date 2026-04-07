@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-text: #1a1a1a;
+  --color-text-secondary: #555;
+  --color-bg: #fff;
+  --color-bg-subtle: #f7f7f7;
+  --color-border: #e0e0e0;
+  --color-accent: #1a1a1a;
+  --color-accent-hover: #444;
+  --color-cancelled: #b44;
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --max-width: 900px;
+  --section-gap: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Main ---- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: var(--section-gap) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+}
+
+section > p {
+  color: var(--color-text-secondary);
+  max-width: 65ch;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  main {
+    padding: 0 1rem;
+  }
+}
+
+/* ---- Print ---- */
+@media print {
+  section {
+    break-inside: avoid;
+  }
+}

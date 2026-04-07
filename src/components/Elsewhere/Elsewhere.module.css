@@ -1,0 +1,43 @@
+.elsewhereList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.elsewhereList a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.elsewhereList a:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-accent);
+}
+
+.elsewhereList img {
+  width: 20px;
+  height: 20px;
+}
+
+.deletedLink {
+  text-decoration: line-through;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+}
+
+@media (max-width: 640px) {
+  .elsewhereList {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,23 @@
+.resourcesList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resourcesList a {
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color 0.2s;
+}
+
+.resourcesList a:hover {
+  border-color: var(--color-accent);
+}
+
+.resourceDescription {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}

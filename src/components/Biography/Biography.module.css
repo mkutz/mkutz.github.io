@@ -1,0 +1,8 @@
+.biography p {
+  margin-bottom: 1rem;
+  max-width: 65ch;
+}
+
+.biography p:last-child {
+  margin-bottom: 0;
+}
