@@ -1,3 +1,21 @@
 .talks {
   background: var(--color-section-yellow);
 }
+
+.slideEmbed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 72.9%;
+  margin-top: 1.25rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.slideEmbed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

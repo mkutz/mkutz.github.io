@@ -1,8 +1,29 @@
 import { talks } from '../../data/talks'
 import styles from '../shared/Card.module.css'
 import sectionStyles from './Talks.module.css'
+import talkStyles from './Talks.module.css'
 
-function TalkCard({ talk }) {
+function SlideEmbed({ url, title }) {
+  return (
+      <div className={talkStyles.slideEmbed}>
+          <iframe
+              src={`${url}/embed?byline=hidden&shared_notes=hidden`}
+              title={title}
+              allowFullScreen
+          />
+      </div>
+  )
+}
+
+function findSlidesComUrl(materials) {
+    if (!materials) return null
+    const slide = materials.find(m => m.url.startsWith('https://slides.com/'))
+    return slide ? slide.url : null
+}
+
+function TalkCard({talk}) {
+    const slidesUrl = findSlidesComUrl(talk.materials)
+
   return (
     <article id={talk.id} className={styles.card}>
       <h3>
@@ -13,6 +34,7 @@ function TalkCard({ talk }) {
       {talk.paragraphs.map((p, i) => (
         <p key={i}>{p}</p>
       ))}
+      {slidesUrl && <SlideEmbed url={slidesUrl} title={talk.title} />}
       {talk.keyLearnings && (
         <>
           <h4>Key Learnings</h4>
