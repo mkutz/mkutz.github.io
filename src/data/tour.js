@@ -3,6 +3,22 @@ export const tourData = [
     year: 2026,
     events: [
       {
+        date: "2026-10-06…08",
+        occasion: "Hustef",
+        occasionUrl: "https://hustef.com/",
+        content: [{ title: "WTFM: Where's the F****** Manual⁈", anchor: "wtfm" }],
+        location: "Budapest",
+        locationUrl: "https://maps.app.goo.gl/6Gp9gQcR5oEiBpg29",
+      },
+      {
+        date: "2026-09-16…17",
+        occasion: "TACON 2026",
+        occasionUrl: "https://events.summit-community.de/event/tacon-2026/",
+        content: [{ title: "Aus großem Vertrauen folgt große Verantwortung", anchor: "trust-responsibility" }],
+        location: "Mediencampus Villa Ida, Leipzig",
+        locationUrl: "https://maps.app.goo.gl/o6CZGuEE6xt6Dq7s8",
+      },
+      {
         date: "2026-06-15…18",
         occasion: "EuroSTAR Conference",
         occasionUrl: "https://conference.eurostarsoftwaretesting.com/",
@@ -15,7 +31,7 @@ export const tourData = [
         occasion: "Community Days DevOps",
         occasionUrl: "https://summit-community.de/veranstaltung/devops/",
         content: [{ title: "Qualität im Mikrokosmos: Teamgetriebene Qualitätssicherung im Microservice-Ökosystem", anchor: "team-driven-microservice-qa-talk" }],
-        location: "Alte Essig Manufactur",
+        location: "Alte Essig Manufactur, Leipzig",
         locationUrl: "https://goo.gl/maps/9BnrAR85dFuCnGLK7",
       },
     ],
