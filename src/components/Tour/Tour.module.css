@@ -127,6 +127,30 @@
   text-decoration: none;
 }
 
+.showMoreContainer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.showMoreButton {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.showMoreButton:hover {
+  background: var(--color-section-orange-dark, #e67e22);
+  border-color: var(--color-text-primary);
+  color: white;
+}
+
 @media (max-width: 640px) {
   .tourEvent {
     grid-template-columns: 1fr;

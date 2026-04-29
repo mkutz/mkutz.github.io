@@ -5,7 +5,7 @@ export const tourData = [
       {
         date: "2026-10-06…08",
         occasion: "Hustef",
-        occasionUrl: "https://hustef.com/",
+        occasionUrl: "https://hustef.com/michael-kutz_2026/",
         content: [{ title: "WTFM: Where's the F****** Manual⁈", anchor: "wtfm" }],
         location: "Budapest",
         locationUrl: "https://maps.app.goo.gl/6Gp9gQcR5oEiBpg29",

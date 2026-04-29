@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { tourData } from '../../data/tour'
 import styles from './Tour.module.css'
 
@@ -82,6 +83,15 @@ function TourEvent({ event }) {
 }
 
 export default function Tour() {
+  const [showPast, setShowPast] = useState(false)
+  const currentYear = new Date().getFullYear()
+
+  const visibleTourData = showPast
+    ? tourData
+    : tourData.filter(d => d.year >= currentYear)
+
+  const hasPastEvents = tourData.some(d => d.year < currentYear)
+
   return (
     <section id="tour" className={styles.tour}>
       <div className="section-inner">
@@ -89,7 +99,7 @@ export default function Tour() {
         <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
           Conference appearances. Videos and slides are added to past events when available.
         </p>
-        {tourData.map(({ year, events }) => (
+        {visibleTourData.map(({ year, events }) => (
           <div key={year} className={styles.tourYear}>
             <h3>{year}</h3>
             {events.map((event, i) => (
@@ -97,6 +107,16 @@ export default function Tour() {
             ))}
           </div>
         ))}
+        {hasPastEvents && !showPast && (
+          <div className={styles.showMoreContainer}>
+            <button
+              className={styles.showMoreButton}
+              onClick={() => setShowPast(true)}
+            >
+              Show past events
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )
