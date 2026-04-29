@@ -7,7 +7,7 @@ export default function Biography() {
         <h2>Biography</h2>
         <p>
           I'm a Software Engineer with a passion for systems, quality, and the people who build them.
-          In June 2026, I'm joining <a href="https://entropy-data.de" target="_blank" rel="noopener noreferrer">Entropy Data</a> as a Staff Engineer.
+          In June 2026, I'm joining <a href="https://entropy-data.com" target="_blank" rel="noopener noreferrer">Entropy Data</a> as a Staff Engineer.
           Prior to that, I spent almost 12 years as a Principal Engineer at <a href="https://www.rewe-digital.com" target="_blank" rel="noopener noreferrer">REWE digital</a>, where I played a key role in shaping agile development, test automation, and SRE practices.
         </p>
 
