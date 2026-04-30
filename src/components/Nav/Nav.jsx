@@ -1,3 +1,4 @@
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import styles from './Nav.module.css'
 
 const SECTION_COLORS = {
@@ -25,6 +26,9 @@ export default function Nav({ items, scrolled }) {
             </a>
           </li>
         ))}
+        <li>
+          <ThemeToggle />
+        </li>
       </ul>
     </nav>
   )

@@ -11,10 +11,13 @@
   --color-text-secondary: #555;
   --color-bg: #fff;
   --color-bg-subtle: #f7f7f7;
+  --color-bg-card: rgba(255, 255, 255, 0.92);
   --color-border: #e0e0e0;
   --color-accent: #1a1a1a;
   --color-accent-hover: #444;
   --color-cancelled: #b44;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --icon-filter: none;
   --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   --max-width: 900px;
   --section-gap: 4rem;
@@ -27,6 +30,52 @@
   --color-section-blue: #004DFF;
   --color-section-indigo: #6A0DAD;
   --color-section-violet: #750787;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-text: #e8e8e8;
+    --color-text-secondary: #aaa;
+    --color-bg: #1a1a1a;
+    --color-bg-subtle: #2a2a2a;
+    --color-bg-card: rgba(30, 30, 30, 0.92);
+    --color-border: #3a3a3a;
+    --color-accent: #e8e8e8;
+    --color-accent-hover: #ccc;
+    --color-cancelled: #e66;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --icon-filter: invert(1);
+
+    --color-section-red: #8b0000;
+    --color-section-orange: #a05600;
+    --color-section-yellow: #8a7d00;
+    --color-section-green: #004d18;
+    --color-section-blue: #002699;
+    --color-section-indigo: #3d0066;
+    --color-section-violet: #3d0044;
+  }
+}
+
+[data-theme="dark"] {
+  --color-text: #e8e8e8;
+  --color-text-secondary: #aaa;
+  --color-bg: #1a1a1a;
+  --color-bg-subtle: #2a2a2a;
+  --color-bg-card: rgba(30, 30, 30, 0.92);
+  --color-border: #3a3a3a;
+  --color-accent: #e8e8e8;
+  --color-accent-hover: #ccc;
+  --color-cancelled: #e66;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --icon-filter: invert(1);
+
+  --color-section-red: #8b0000;
+  --color-section-orange: #a05600;
+  --color-section-yellow: #8a7d00;
+  --color-section-green: #004d18;
+  --color-section-blue: #002699;
+  --color-section-indigo: #3d0066;
+  --color-section-violet: #3d0044;
 }
 
 html {
@@ -55,7 +104,7 @@ section {
 .section-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--color-bg-card);
   border-radius: 12px;
   padding: var(--section-gap) 2.5rem;
 }
