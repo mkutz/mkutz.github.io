@@ -11,6 +11,14 @@ export const tourData = [
         locationUrl: "https://maps.app.goo.gl/6Gp9gQcR5oEiBpg29",
       },
       {
+        date: "2026-09-21…22",
+        occasion: "Targeting Quality 2026",
+        occasionUrl: "https://kwsqa.org/tq2026/",
+        content: [{ title: "Fantastic Biases & Where to Find Them in Software Development", anchor: "fantastic-biases-talk" }],
+        location: "Cambridge Hotel & Conference Centre",
+        locationUrl: "https://maps.app.goo.gl/nzhpVD6RfBbxQccB8"
+      },
+      {
         date: "2026-09-16…17",
         occasion: "TACON 2026",
         occasionUrl: "https://events.summit-community.de/event/tacon-2026/",
