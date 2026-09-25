@@ -13,7 +13,7 @@ export const talks = [
       "Acquire ways to demonstrate responsible behavior and ownership to deepen trust.",
     ],
     materials: [
-      { label: "Slides", url: "https://slides.com/mkutz/trust-responsibility", note: "work in progress" },
+      { label: "Slides", url: "https://slides.com/mkutz/trust-responsibility" },
     ],
   },
   {
