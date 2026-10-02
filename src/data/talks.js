@@ -1,5 +1,21 @@
 export const talks = [
   {
+    id: "consumer-driven-data-contracts",
+    title: "Consumer-Driven Contracts for Data – What the Data World Can Learn from the Test Pyramid (and Vice Versa)",
+    paragraphs: [
+      "We would never ship a service to production without tests. We know consumer-driven contracts, we mock ports and adapters, and we version our APIs carefully. Yet the very same teams deliver data to downstream consumers every day – to dashboards, ML models, or other teams – without any contract, without tests, without guarantees. When a schema breaks, nobody notices until the dashboard stays empty.",
+      "I spent 15 years working on software quality before moving into the data world. The sobering insight: the data side is roughly where software testing was 15 years ago. The good news: we don't have to reinvent the wheel. Much of what we learned about contract tests, interfaces, and schema evolution can be transferred directly.",
+      "In this talk, I'll build a bridge between both worlds. We'll look at how consumer-driven contracts, Pact-style contract tests, and ports-and-adapters thinking can be applied to data products – with data contracts as an \"API for data\", the Open Data Contract Standard (ODCS) as the specification, and contract tests that kick in before deployment. Just as honestly, we'll look at what doesn't transfer easily: data has no caller you control, history can't be rolled back, and \"correct\" is often a matter of semantics rather than types.",
+      "Finally, a look ahead: when LLMs and agents start querying data products on their own, a machine-readable contract about meaning and quality turns from a nice-to-have into a prerequisite.",
+    ],
+    keyLearnings: [
+      "Learn how familiar testing concepts (consumer-driven contracts, schema tests, hexagonal interfaces) can be applied to data products.",
+      "Understand what a data contract is, what ODCS looks like, and how contract tests fit into a pipeline.",
+      "See where the analogy to the software world holds – and where it deliberately breaks.",
+      "Discover why data quality becomes an architectural concern in a world of AI agents.",
+    ],
+  },
+  {
     id: "trust-responsibility",
     title: "With Great Trust Comes Great Responsibility – How to Super Empower Teams to Continuously Deliver High Quality Software",
     paragraphs: [
