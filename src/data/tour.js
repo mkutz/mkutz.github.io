@@ -3,6 +3,14 @@ export const tourData = [
     year: 2026,
     events: [
       {
+        date: "2026-11-16…19",
+        occasion: "Agile Testing Days",
+        occasionUrl: "https://agiletestingdays.com/",
+        content: [],
+        location: "Dorint Sanssouci Potsdam",
+        locationUrl: "https://g.page/Dorint-Potsdam?share",
+      },
+      {
         date: "2026-10-06…08",
         occasion: "Hustef",
         occasionUrl: "https://hustef.com/michael-kutz_2026/",
