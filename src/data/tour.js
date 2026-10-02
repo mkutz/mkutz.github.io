@@ -1,5 +1,18 @@
 export const tourData = [
   {
+    year: 2027,
+    events: [
+      {
+        date: "2027-02-02…05",
+        occasion: "OOP",
+        occasionUrl: "https://www.oop-konferenz.de/de/programm/speaker/sprecherdetails/michael-kutz-1",
+        content: [{ title: "Consumer-Driven Contracts für Daten", anchor: "consumer-driven-data-contracts" }],
+        location: "SCC München",
+        locationUrl: "https://www.google.com/maps/search/?api=1&query=SCC+M%C3%BCnchen",
+      },
+    ],
+  },
+  {
     year: 2026,
     events: [
       {
