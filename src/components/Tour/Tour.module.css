@@ -127,6 +127,18 @@
   text-decoration: none;
 }
 
+.keynoteLabel {
+  display: inline-block;
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
 .showMoreContainer {
   margin-top: 3rem;
   display: flex;

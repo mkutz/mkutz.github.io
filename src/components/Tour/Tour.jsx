@@ -17,10 +17,13 @@ function TourContentItem({ item }) {
     </span>
   )
 
+  const keynoteEl = item.keynote && <span className={styles.keynoteLabel}>Keynote</span>
+
   if (item.cancelled) {
     return (
       <div className={styles.tourContentItem}>
         <span className={styles.cancelledText}>{titleEl}</span>
+        {keynoteEl}
         {item.cancelLabel && <span className={styles.cancelLabel}>{item.cancelLabel}</span>}
         {extraEl}
       </div>
@@ -30,6 +33,7 @@ function TourContentItem({ item }) {
   return (
     <div className={styles.tourContentItem}>
       {titleEl}
+      {keynoteEl}
       {extraEl}
     </div>
   )
