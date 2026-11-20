@@ -66,6 +66,11 @@ function TourEvent({ event }) {
             <a href={event.video.url} target="_blank" rel="noopener noreferrer">{event.video.title}</a>
           </div>
         )}
+        {event.transcript && (
+          <div className={styles.tourVideo}>
+            <a href={event.transcript.url}>{event.transcript.title}</a>
+          </div>
+        )}
         <div className={styles.tourLocation}>
           {event.originalLocation && (
             <>

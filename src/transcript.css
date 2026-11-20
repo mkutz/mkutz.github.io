@@ -1,0 +1,258 @@
+/* ---- Transcript page ---- */
+
+.page-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-nav-back {
+  padding: 1rem 0.25rem;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.page-nav-back:hover {
+  color: var(--color-text);
+}
+
+.page-header {
+  background: #1a1a1a;
+  color: white;
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.page-kicker {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  margin-bottom: 0.75rem;
+}
+
+.page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 22ch;
+  margin: 0 auto 1rem;
+  text-wrap: balance;
+}
+
+.page-meta {
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+.page-meta a {
+  color: inherit;
+}
+
+.transcript {
+  background: var(--color-section-yellow);
+  padding: 2rem 1.5rem;
+}
+
+.transcript-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--color-bg-card);
+  border-radius: 12px;
+  padding: 3rem 3.5rem;
+}
+
+.transcript-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.transcript-links a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.transcript-links a:hover {
+  background: var(--color-border);
+  border-color: var(--color-accent);
+}
+
+.transcript-toc {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.transcript-toc h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.transcript-toc ol {
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.transcript-toc li {
+  break-inside: avoid;
+}
+
+.transcript-toc a {
+  color: var(--color-text);
+}
+
+.transcript-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.transcript-body p {
+  margin-bottom: 1.15rem;
+}
+
+.transcript-body h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 3rem 0 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.transcript-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 2.25rem 0 1rem;
+}
+
+.transcript-body figure {
+  margin: 1.75rem 0;
+}
+
+/* Wide screens: slides sit beside the text they belong to and stay in view
+   while that text scrolls by. Narrow screens: slides stay inline above it. */
+@media (min-width: 1080px) {
+  .transcript-inner {
+    max-width: 1200px;
+  }
+
+  .segment {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    column-gap: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .segment-text {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .segment-slides {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    position: sticky;
+    top: 4.5rem;
+  }
+
+  .transcript-body .segment-slides figure {
+    margin: 0.35rem 0 1rem;
+  }
+}
+
+.transcript-body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+}
+
+.transcript-body code {
+  font-size: 0.9em;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: var(--color-bg-subtle);
+}
+
+.page-footer {
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.page-footer a {
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .transcript {
+    padding: 1rem 0.75rem;
+  }
+
+  .transcript-inner {
+    padding: 2rem 1.25rem;
+    border-radius: 8px;
+  }
+
+  .transcript-toc ol {
+    columns: 1;
+  }
+
+  .transcript-body {
+    font-size: 1rem;
+  }
+}
+
+@media print {
+  .page-nav,
+  .transcript-toc {
+    display: none;
+  }
+
+  .transcript,
+  .transcript-inner {
+    background: none;
+    padding: 0;
+  }
+}
