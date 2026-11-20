@@ -158,6 +158,38 @@
   margin: 1.75rem 0;
 }
 
+/* Wide screens: slides sit beside the text they belong to and stay in view
+   while that text scrolls by. Narrow screens: slides stay inline above it. */
+@media (min-width: 1080px) {
+  .transcript-inner {
+    max-width: 1200px;
+  }
+
+  .segment {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    column-gap: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .segment-text {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .segment-slides {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    position: sticky;
+    top: 4.5rem;
+  }
+
+  .transcript-body .segment-slides figure {
+    margin: 0.35rem 0 1rem;
+  }
+}
+
 .transcript-body img {
   display: block;
   width: 100%;
