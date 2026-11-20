@@ -377,6 +377,8 @@ So: with great trust comes great responsibility. Please try it. Thank you!
 
 ## Q&A
 
+![Photo: Michael Kutz on stage, listening to a question from the audience](q-and-a.webp)
+
 <!-- 0:57:01 -->
 **Audience:** If you dig back into your memories – the case you mentioned where you were eagerly pushing something you strongly believed in without paying attention to the others: what was the trigger that made you notice something wasn't quite clicking? That your eagerness to improve quality and get the team towards the goal wasn't landing? Was there something that helped you realize you were going in the wrong direction?
 
