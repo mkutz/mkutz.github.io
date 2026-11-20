@@ -373,7 +373,7 @@ Here are some books that helped me finally find that damn spider. Daniel Pink, *
 
 So: with great trust comes great responsibility. Please try it. Thank you!
 
-![Comic illustration: a bearded hero in a green spider hoodie swinging through the city, saying "With great trust comes great responsibility"](slides/31-thank-you.webp)
+![Comic illustration: Michael Kutz as a superhero in a green spider hoodie swinging through the city, saying "With great trust comes great responsibility"](slides/31-thank-you.webp)
 
 ## Q&A
 
