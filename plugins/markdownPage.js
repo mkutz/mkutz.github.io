@@ -1,14 +1,28 @@
-import { readFileSync } from 'node:fs'
-import { dirname, join } from 'node:path'
+import { existsSync, readFileSync } from 'node:fs'
+import { dirname, join, relative } from 'node:path'
 import { Marked } from 'marked'
 
 const TOC_PLACEHOLDER = '<!-- markdown:toc -->'
 const CONTENT_PLACEHOLDER = '<!-- markdown:content -->'
 const MARKDOWN_FILE = 'transcript.md'
 
-// Slides are exported at 1920×1080 and converted to 1400px wide WebP.
-const IMAGE_WIDTH = 1400
-const IMAGE_HEIGHT = 788
+/** Reads the pixel size from a WebP file header (lossy, lossless or extended). */
+function webpSize(file) {
+  const b = readFileSync(file)
+  if (b.toString('ascii', 0, 4) !== 'RIFF' || b.toString('ascii', 8, 12) !== 'WEBP') return null
+  switch (b.toString('ascii', 12, 16)) {
+    case 'VP8 ':
+      return { width: b.readUInt16LE(26) & 0x3fff, height: b.readUInt16LE(28) & 0x3fff }
+    case 'VP8L': {
+      const bits = b.readUInt32LE(21)
+      return { width: (bits & 0x3fff) + 1, height: ((bits >> 14) & 0x3fff) + 1 }
+    }
+    case 'VP8X':
+      return { width: b.readUIntLE(24, 3) + 1, height: b.readUIntLE(27, 3) + 1 }
+    default:
+      return null
+  }
+}
 
 function escapeAttr(text) {
   return text
@@ -87,7 +101,12 @@ function renderSegments(marked, tokens) {
     .join('')
 }
 
-export function renderMarkdown(markdown) {
+/**
+ * @param markdown the Markdown source
+ * @param imageSize resolves an image href to `{ width, height }` (or null), so
+ *   the browser can reserve space before the image loads
+ */
+export function renderMarkdown(markdown, imageSize = () => null) {
   const toc = []
   let imageCount = 0
 
@@ -101,7 +120,11 @@ export function renderMarkdown(markdown) {
       },
       image({ href, text }) {
         const loading = imageCount++ === 0 ? 'eager' : 'lazy'
-        return `<img src="${escapeAttr(href)}" alt="${escapeAttr(text)}" width="${IMAGE_WIDTH}" height="${IMAGE_HEIGHT}" loading="${loading}" decoding="async">`
+        const size = imageSize(href)
+        const sizeAttrs = size
+          ? ` width="${size.width}" height="${size.height}"${size.height > size.width ? ' class="portrait"' : ''}`
+          : ''
+        return `<img src="${escapeAttr(href)}" alt="${escapeAttr(text)}"${sizeAttrs} loading="${loading}" decoding="async">`
       },
       paragraph({ tokens }) {
         const html = this.parser.parseInline(tokens)
@@ -121,14 +144,27 @@ export function renderMarkdown(markdown) {
  * replacing the `<!-- markdown:toc -->` and `<!-- markdown:content -->` placeholders.
  */
 export default function markdownPage() {
+  let config
+
   return {
     name: 'markdown-page',
+    configResolved(resolved) {
+      config = resolved
+    },
     transformIndexHtml: {
       order: 'post',
       handler(html, ctx) {
         if (!html.includes(CONTENT_PLACEHOLDER)) return html
-        const markdownPath = join(dirname(ctx.filename), MARKDOWN_FILE)
-        const { content, toc } = renderMarkdown(readFileSync(markdownPath, 'utf-8'))
+        const pageDir = dirname(ctx.filename)
+        const markdownPath = join(pageDir, MARKDOWN_FILE)
+        // Relative image paths point into the page's folder under public/.
+        const publicPageDir = join(config.publicDir, relative(config.root, pageDir))
+        const imageSize = (href) => {
+          if (!href.endsWith('.webp') || /^[a-z]+:|^\//.test(href)) return null
+          const file = join(publicPageDir, href)
+          return existsSync(file) ? webpSize(file) : null
+        }
+        const { content, toc } = renderMarkdown(readFileSync(markdownPath, 'utf-8'), imageSize)
         return html.replace(TOC_PLACEHOLDER, toc).replace(CONTENT_PLACEHOLDER, content)
       },
     },
