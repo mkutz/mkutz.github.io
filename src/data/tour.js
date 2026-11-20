@@ -20,6 +20,7 @@ export const tourData = [
         occasion: "Agile Testing Days",
         occasionUrl: "https://agiletestingdays.com/2026/session/with-great-trust-comes-great-responsibility/",
         content: [{ title: "With Great Trust Comes Great Responsibility", anchor: "trust-responsibility", keynote: true }],
+        transcript: { title: "Transcript", url: "/talks/trust-responsibility/2026-11-17-atd2026/" },
         location: "Dorint Sanssouci Potsdam",
         locationUrl: "https://g.page/Dorint-Potsdam?share",
       },

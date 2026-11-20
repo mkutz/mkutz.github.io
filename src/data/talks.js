@@ -31,6 +31,7 @@ export const talks = [
     materials: [
       { label: "English Slides", url: "https://slides.com/mkutz/trust-responsibility" },
       { label: "German Slides", url: "https://slides.com/mkutz/vertrauen-verantwortung" },
+      { label: "Transcript (Agile Testing Days 2026)", url: "/talks/trust-responsibility/2026-11-17-atd2026/" },
     ],
   },
   {

@@ -48,7 +48,7 @@ function TalkCard({talk}) {
       {talk.materials && (
         <div className={styles.materials}>
           {talk.materials.map((mat, i) => (
-            <a key={i} href={mat.url} target="_blank" rel="noopener noreferrer">
+            <a key={i} href={mat.url} {...(mat.url.startsWith('/') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}>
               {mat.label}
               {mat.note && <span style={{ fontWeight: 400, opacity: 0.6 }}> ({mat.note})</span>}
             </a>
