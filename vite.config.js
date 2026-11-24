@@ -11,6 +11,7 @@ export default defineConfig({
   input: {
     main: page('./index.html'),
     'trust-responsibility-2026-11-17-atd2026': page('./talks/trust-responsibility/2026-11-17-atd2026/index.html'),
+    'untangle-your-spaghetti-test-code-2024-11-08-oredev2024': page('./talks/untangle-your-spaghetti-test-code/2024-11-08-oredev2024/index.html'),
     'measure-quality-2023-12-12-automation-advocates': page('./talks/measure-quality/2023-12-12-automation-advocates/index.html'),
   },
 })
