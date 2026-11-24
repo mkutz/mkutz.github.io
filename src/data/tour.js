@@ -153,6 +153,15 @@ export const tourData = [
     year: 2023,
     events: [
       {
+        date: "2023-12-12",
+        occasion: "Automation Advocates",
+        occasionUrl: "https://www.meetup.com/automation-advocates/",
+        content: [{ title: "How (Not) to Measure Quality", anchor: "measure-quality-talk" }],
+        video: { title: "Video", url: "https://youtu.be/bzZu2N8ugdY" },
+        transcript: { title: "Transcript", url: "/talks/measure-quality/2023-12-12-automation-advocates/" },
+        location: "online",
+      },
+      {
         date: "2023-11-13…16",
         occasion: "Agile Testing Days",
         occasionUrl: "https://agiletestingdays.com",
