@@ -107,6 +107,8 @@ export const talks = [
       { label: "English Slides", url: "https://slides.com/mkutz/measure-quality" },
       { label: "German Slides", url: "https://slides.com/mkutz/qualitaet-messen" },
       { label: "Article on InfoQ", url: "https://www.infoq.com/articles/metrics-quality-software/" },
+      { label: "Video (Automation Advocates 2023)", url: "https://youtu.be/bzZu2N8ugdY" },
+      { label: "Transcript (Automation Advocates 2023)", url: "/talks/measure-quality/2023-12-12-automation-advocates/" },
     ],
   },
   {
