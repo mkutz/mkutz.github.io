@@ -146,7 +146,7 @@ The same example also shows something else: this is a long arrange. These are qu
 ![Test Data Builder: use a builder class to create whatever object is required for the test; make massive use of defaults and data generators](slides/19-test-data-builder.webp)
 
 <!-- 0:16:02 -->
-What we can do – as Richard also suggested yesterday – is use the builder pattern. Anybody familiar with the builder pattern? Okay, it's pretty common, right?
+What we can do – as Richard Bradshaw also suggested yesterday – is use the builder pattern. Anybody familiar with the builder pattern? Okay, it's pretty common, right?
 
 ![The long arrange before using a test data builder](slides/20-test-data-builder-before.webp)
 

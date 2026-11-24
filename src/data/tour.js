@@ -106,7 +106,7 @@ export const tourData = [
         date: "2024-11-06…08",
         occasion: "Øredev 2024",
         occasionUrl: "https://oredev.org/",
-        content: [{ title: "Untangle Your Spaghetti Test Code Workshop", anchor: "untangle-spaghetti-test-code-workshop" }],
+        content: [{ title: "Untangle Your Spaghetti Test Code", anchor: "untangle-spaghetti-test-code-workshop" }],
         video: { title: "Video", url: "https://youtu.be/b2nXdqaaYdQ" },
         transcript: { title: "Transcript", url: "/talks/untangle-your-spaghetti-test-code/2024-11-08-oredev2024/" },
         location: "MalmöMässan",
