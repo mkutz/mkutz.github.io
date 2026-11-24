@@ -59,9 +59,9 @@ You might say: okay, then only measure the performance of teams. Find metrics th
 It also has a well-researched negative effect on creativity and on motivation in general. When you measure somebody, that's an extrinsic motivation: get better at this, and you'll be rewarded. Even if it's just a pat on the shoulder, it's still a reward. And it's well known that creative work isn't positively affected by extrinsic motivators. Creative workers are usually intrinsically motivated, and you need to cater to that intrinsic motivation. If you add too much extrinsic motivation – bonuses and stuff like that – creativity usually takes a dive. That's a really well-researched effect. I have some literature on the last slide for you.
 
 <!-- 0:08:47 -->
-Let me look at the chat. "Defects per software release, cycle time, time to recovery, lead time. How fast can we deliver a change?" Alexandra, you've read the same books as I did – probably *Accelerate*. I actually started with a really old one, *Lean Software Development*. That's not my Bible, but my favorite one. It's sometimes embarrassing how old the solutions are that we've just forgotten about, right?
+Let me look at the chat. "Defects per software release, cycle time, time to recovery, lead time. How fast can we deliver a change?" Whoever wrote that has read the same books as I did – probably *Accelerate*. I actually started with a really old one, *Lean Software Development*. That's not my Bible, but my favorite one. It's sometimes embarrassing how old the solutions are that we've just forgotten about, right?
 
-"Number of defects" – thanks for giving me that one. I'll get to it later. And "developer happiness" – I really like that, Peter.
+"Number of defects" – thanks for giving me that one. I'll get to it later. And "developer happiness" – I really like that one.
 
 ## How to find metrics
 
@@ -96,7 +96,7 @@ By keeping this chain, this hierarchy of goal, questions and metrics, we always 
 <!-- 0:14:51 -->
 Another basic question: which quality do you actually want to measure? What is quality to begin with?
 
-I really like the metrics Alexandra put in the chat. But in my opinion, they only refer to one kind of quality. I was inspired by Dan Ashby's article – I always forget the number, I think it's eight perspectives on software quality. He put different stakeholders into those perspectives, and I stole that idea here.
+I really like the delivery metrics in the chat. But in my opinion, they only refer to one kind of quality. I was inspired by Dan Ashby's article – I always forget the number, I think it's eight perspectives on software quality. He put different stakeholders into those perspectives, and I stole that idea here.
 
 ![Three overlapping circles: outer quality (users), inner quality (developers), process quality (managers)](slides/10-three-qualities.webp)
 
@@ -114,7 +114,7 @@ And the final one is **process quality**. Process quality is a bit of both, and 
 ![Outer quality](slides/11-outer-quality.webp)
 
 <!-- 0:18:43 -->
-So let's have a look at some metrics for outer quality. Johannes already put "number of defects" in the chat. But let's ask a question first, right?
+So let's have a look at some metrics for outer quality. Somebody already put "number of defects" in the chat. But let's ask a question first, right?
 
 ![Outer quality questions: How defective? How well liked? How functional?](slides/12-outer-quality-questions.webp)
 
@@ -125,7 +125,7 @@ I came up with these three questions. How defective is the product? That's kind 
 ![Number of Found Bugs in Staging vs Production – not "How defective?" but "How effective is the test process?"](slides/13-found-bugs.webp)
 
 <!-- 0:19:30 -->
-The classic metric I always get here is the number of found bugs – or "number of defects", as Johannes put it. So what's the problem with the number of bugs? Any idea what might be wrong with that metric?
+The classic metric I always get here is the number of found bugs – or "number of defects", as it said in the chat. So what's the problem with the number of bugs? Any idea what might be wrong with that metric?
 
 … "If this is a target, then you'll find an infinite number of those." Yes. And "not all bugs are born equal – some of them we might not even care about." Yes.
 
@@ -237,7 +237,7 @@ So how would we measure how well the product is protected? When I asked my team 
 So here's a little example. It's a bowling kata – pretty simple code, it needed to fit on the slide. On the left-hand side, you have a test. On the right-hand side, you have the code. If I execute this test, I get pretty decent coverage. Only two lines missed – those will hopefully be covered by another test case. Nice.
 
 <!-- 0:36:15 -->
-Okay: which part of the test code could I just delete and still get the same coverage? Given, when or then? … Yes, Peter is right. I can just remove the assertion, and it still gives me the same coverage. Now, isn't the assertion kind of the important part? Yes. Unless the code is supposed to throw an exception, the assertion is a really important part.
+Okay: which part of the test code could I just delete and still get the same coverage? Given, when or then? … Yes, that's right, as someone in the chat says. I can just remove the assertion, and it still gives me the same coverage. Now, isn't the assertion kind of the important part? Yes. Unless the code is supposed to throw an exception, the assertion is a really important part.
 
 <!-- 0:37:04 -->
 So code coverage really doesn't tell me how well the code is protected, but rather how much code is not executed by tests. And that's not what I asked. That's not even something I want to know. How much code is executed by tests – that's basically no information. How much code is not executed – okay, that's at least a red flag if the value is really high. So if code coverage is extremely low, that's usually a red flag. But if it's really high, it doesn't give me any information at all.
