@@ -401,8 +401,6 @@ Recently I came across James Shore's article on testing with nullables – "Test
 
 ## Cheat Sheet
 
-![QR codes for the slides and the cheat sheet](slides/69-slides-cheat-sheet.webp)
-
 <!-- 0:42:12 -->
 Okay. If you'd like to apply this to your own test suites: in the background you can see a folded piece of paper. That's the cheat sheet I created from this talk, with the tangles and the untangles, so you can apply them. And if you'd like the slides, they're behind this QR code.
 
