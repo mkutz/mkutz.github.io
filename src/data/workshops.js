@@ -19,6 +19,8 @@ export const workshops = [
       { label: "Code", url: "https://github.com/mkutz/untangle-your-spaghetti-test-code" },
       { label: "Slides", url: "https://slides.com/mkutz/untangle-your-spaghetti-test-code" },
       { label: "Cheat Sheet", url: "resources/untangle-cheat-sheet.pdf" },
+      { label: "Talk Video (Øredev 2024)", url: "https://youtu.be/b2nXdqaaYdQ" },
+      { label: "Talk Transcript (Øredev 2024)", url: "/talks/untangle-your-spaghetti-test-code/2024-11-08-oredev2024/" },
     ],
   },
   {
